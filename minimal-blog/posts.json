@@ -1,86 +1,95 @@
 {
-  "siteName": "Quiet Notes",
-  "tagline": "Short essays on design, work, and everyday life.",
+  "siteName": "The Daily Draft",
+  "tagline": "A personal blog for essays, notes, and things worth posting.",
+  "categories": ["Life", "Work", "Travel", "Food"],
   "posts": [
     {
-      "slug": "slow-mornings",
-      "title": "Slow Mornings",
-      "excerpt": "Why the first hour of the day deserves more margin than the rest.",
-      "author": "Mihyun",
-      "publishDate": "2026-05-28",
+      "slug": "morning-pages",
+      "title": "Morning Pages Before Email",
+      "excerpt": "Ten minutes of handwriting changed how I start the workday.",
+      "author": "Mihyun Park",
+      "publishDate": "2026-05-30",
+      "category": "Life",
       "featured": true,
-      "coverImage": "https://picsum.photos/seed/slow-mornings/1200/675",
-      "body": "<p>I used to treat mornings as a race to inbox zero. The shift came when I blocked thirty minutes with no inputs—no feeds, no messages, just coffee and a notebook.</p><p>That small buffer changed how the rest of the day felt. Decisions arrived with less noise. Writing came easier because the first words were mine, not borrowed urgency.</p><p>If you are building a minimal site, protect one ritual the way you protect a logo: same time, same place, same silence.</p>"
+      "coverImage": "https://picsum.photos/seed/draft-morning/1400/900",
+      "body": "<p class=\"lead\">I do not check my phone until the notebook is full—usually half a page, never more.</p><p>Some days it is grocery lists and stray worries. Other days a single sentence is enough: <em>today, finish the small thing first.</em></p><p>Posting it here is optional; the blog is the public layer on top of a private habit.</p>"
     },
     {
-      "slug": "one-typeface",
-      "title": "One Typeface Is Enough",
-      "excerpt": "Consistency beats variety when readability is the goal.",
-      "author": "Mihyun",
-      "publishDate": "2026-05-21",
+      "slug": "remote-desk-setup",
+      "title": "My Remote Desk Setup in 2026",
+      "excerpt": "Chair, light, and one rule: cables where I cannot see them.",
+      "author": "Mihyun Park",
+      "publishDate": "2026-05-24",
+      "category": "Work",
       "featured": false,
-      "coverImage": "https://picsum.photos/seed/one-typeface/1200/675",
-      "body": "<p>Every new font in a project is a relationship to maintain. Families, weights, fallbacks, and licensing multiply quickly.</p><p>For editorial layouts, a single family with clear hierarchy—display size for titles, text size for body—often outperforms a pairing chosen for novelty.</p><p>Let color and spacing carry personality instead.</p>"
+      "coverImage": "https://picsum.photos/seed/draft-desk/1200/800",
+      "body": "<p>The monitor sits at arm's length. The keyboard is quiet enough for calls. Everything else is negotiable.</p><p>I used to chase perfect gear. Now I chase a clear surface at 5 p.m.</p>"
     },
     {
-      "slug": "lists-over-grids",
-      "title": "Lists Over Grids for Blogs",
-      "excerpt": "Vertical rhythm helps readers scan without visual competition.",
-      "author": "Mihyun",
-      "publishDate": "2026-05-14",
+      "slug": "blog-categories",
+      "title": "Why I Use Four Categories on This Blog",
+      "excerpt": "Fewer labels make archiving easier—for me and for readers.",
+      "author": "Mihyun Park",
+      "publishDate": "2026-05-18",
+      "category": "Work",
       "featured": false,
-      "coverImage": "https://picsum.photos/seed/lists-over-grids/1200/675",
-      "body": "<p>Card grids look rich in marketing demos and tired in daily reading. A simple list—date, title, one-line summary—respects attention.</p><p>Thumbnails are optional. When they appear, keep them small so the title remains the anchor.</p>"
+      "coverImage": "https://picsum.photos/seed/draft-categories/1200/800",
+      "body": "<p>Life, Work, Travel, Food. That is the whole map. If a post does not fit, I edit the post—not the taxonomy.</p><p>On the blog page you can filter by chip. It is the same list, just narrowed.</p>"
     },
     {
-      "slug": "draft-in-public",
-      "title": "Draft in Public, Publish in Private",
-      "excerpt": "Share process, ship finished work.",
-      "author": "Mihyun",
-      "publishDate": "2026-05-07",
+      "slug": "weeknight-pasta",
+      "title": "Weeknight Pasta Without a Recipe",
+      "excerpt": "Olive oil, garlic, whatever green thing is in the fridge.",
+      "author": "Mihyun Park",
+      "publishDate": "2026-05-11",
+      "category": "Food",
       "featured": false,
-      "coverImage": "https://picsum.photos/seed/draft-in-public/1200/675",
-      "body": "<p>Social posts are sketches. Blog posts are rooms you invite people into. The difference is editing and intent.</p><p>Write messy notes elsewhere. Publish when a single idea can stand without footnotes.</p>"
+      "coverImage": "https://picsum.photos/seed/draft-pasta/1200/800",
+      "body": "<p>Boil water first. Always. The sauce can wait thirty seconds; the pasta cannot.</p><p>I write food posts when I want a record of what comfort tasted like that year.</p>"
     },
     {
-      "slug": "footer-as-closing",
-      "title": "The Footer as a Closing Sentence",
-      "excerpt": "End pages with calm, not clutter.",
-      "author": "Mihyun",
-      "publishDate": "2026-04-30",
+      "slug": "rainy-museum",
+      "title": "A Rainy Hour at the Museum",
+      "excerpt": "Fewer photos, more wall text than usual.",
+      "author": "Mihyun Park",
+      "publishDate": "2026-05-04",
+      "category": "Life",
       "featured": false,
-      "coverImage": "https://picsum.photos/seed/footer-closing/1200/675",
-      "body": "<p>Footers accumulate links like attics accumulate boxes. For minimal templates, one copyright line and maybe a single social link is enough.</p><p>Everything else can live on About.</p>"
+      "coverImage": "https://picsum.photos/seed/draft-museum/1200/800",
+      "body": "<p>Bad weather is good for slow looking. I left with one note in my phone and no gift-shop bag.</p><p>Not every visit needs a post—but this one did.</p>"
     },
     {
-      "slug": "cms-as-master",
-      "title": "CMS as Master Slide",
-      "excerpt": "One post layout, many URLs—like a template that repeats.",
-      "author": "Mihyun",
-      "publishDate": "2026-04-22",
+      "slug": "writing-in-public",
+      "title": "Writing in Public, Editing in Private",
+      "excerpt": "Drafts are messy; published posts owe you clarity.",
+      "author": "Mihyun Park",
+      "publishDate": "2026-04-27",
+      "category": "Work",
       "featured": false,
-      "coverImage": "https://picsum.photos/seed/cms-master/1200/675",
-      "body": "<p>In Wix, dynamic item pages behave like PowerPoint masters: design once, populate with collection data.</p><p>Static pages handle Home and About. The list page handles discovery. The item page handles depth.</p>"
+      "coverImage": "https://picsum.photos/seed/draft-writing/1200/800",
+      "body": "<p>I keep fragments in notes apps and polish only what ships on The Daily Draft.</p><p>Readers see the finished post template—title, date, category, body—not the four deleted paragraphs.</p>"
     },
     {
-      "slug": "featured-one",
-      "title": "Feature Only One Post",
-      "excerpt": "A single highlight on Home beats a carousel.",
-      "author": "Mihyun",
-      "publishDate": "2026-04-15",
+      "slug": "carry-on-weekend",
+      "title": "One Bag for a Long Weekend",
+      "excerpt": "If it does not fit, it does not go.",
+      "author": "Mihyun Park",
+      "publishDate": "2026-04-20",
+      "category": "Travel",
       "featured": false,
-      "coverImage": "https://picsum.photos/seed/featured-one/1200/675",
-      "body": "<p>Home should answer two questions: what is this site, and what should I read first?</p><p>Mark one post as featured and show three or four recent titles beneath. That is sufficient hierarchy.</p>"
+      "coverImage": "https://picsum.photos/seed/draft-travel/1200/800",
+      "body": "<p>Travel posts on this blog are short on logistics and long on what surprised me.</p><p>This trip: one jacket, no checked bag, wrong shoes anyway.</p>"
     },
     {
-      "slug": "about-stays-static",
-      "title": "Keep About Static",
-      "excerpt": "Bio pages change rarely; posts change often.",
-      "author": "Mihyun",
-      "publishDate": "2026-04-08",
+      "slug": "hello-blog",
+      "title": "Hello, This Is My Blog",
+      "excerpt": "What The Daily Draft is and how often I plan to post.",
+      "author": "Mihyun Park",
+      "publishDate": "2026-04-13",
+      "category": "Life",
       "featured": false,
-      "coverImage": "https://picsum.photos/seed/about-static/1200/675",
-      "body": "<p>Resist turning About into another feed. A portrait, two paragraphs, and a link back to the blog is a complete page.</p><p>Save CMS connections for content that actually repeats.</p>"
+      "coverImage": "https://picsum.photos/seed/draft-hello/1200/800",
+      "body": "<p>Welcome. You are on the home page, the blog list, or a single post—same site, three views.</p><p>I will publish when there is something worth keeping, not on a schedule I cannot keep.</p><p>Thanks for reading.</p>"
     }
   ]
 }

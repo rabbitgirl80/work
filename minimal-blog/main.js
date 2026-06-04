@@ -18,7 +18,7 @@ function formatDate(iso) {
   const d = new Date(iso + "T12:00:00");
   return d.toLocaleDateString("en-US", {
     year: "numeric",
-    month: "short",
+    month: "long",
     day: "numeric",
   });
 }
@@ -55,32 +55,50 @@ function renderFooter(site) {
   const year = new Date().getFullYear();
   return `
     <footer class="site-footer">
-      <div class="container">
+      <div class="container site-footer__inner">
         <p>© ${year} ${site.siteName}</p>
+        <span class="site-footer__tag">Personal blog sample</span>
       </div>
     </footer>
   `;
 }
 
-function renderPostListItem(post) {
+function renderChip(category, active, filterKey) {
+  const activeClass = active ? " chip--active" : "";
+  const data = filterKey ? ` data-filter="${filterKey}"` : "";
+  return `<button type="button" class="chip${activeClass}"${data}>${category}</button>`;
+}
+
+function renderCard(post) {
   return `
-    <li class="post-list__item">
-      <a class="post-list__link" href="${postUrl(post.slug)}">
-        <time class="post-list__date" datetime="${post.publishDate}">${formatDate(post.publishDate)}</time>
-        <h2 class="post-list__title">${post.title}</h2>
-        <p class="post-list__excerpt">${post.excerpt}</p>
+    <li class="card">
+      <a class="card__link" href="${postUrl(post.slug)}">
+        <img class="card__media" src="${post.coverImage}" alt="" width="600" height="450" loading="lazy" />
+        <div class="card__body">
+          <div class="card__meta">
+            <span class="chip">${post.category}</span>
+            <time datetime="${post.publishDate}">${formatDate(post.publishDate)}</time>
+          </div>
+          <h2 class="card__title">${post.title}</h2>
+          <p class="card__excerpt">${post.excerpt}</p>
+        </div>
       </a>
     </li>
   `;
 }
 
-function renderFeatured(post) {
+function renderHeroMag(post) {
   return `
-    <a class="featured-card" href="${postUrl(post.slug)}">
-      <img class="featured-card__media" src="${post.coverImage}" alt="" width="1200" height="675" loading="lazy" />
-      <h2 class="featured-card__title">${post.title}</h2>
-      <p class="featured-card__excerpt">${post.excerpt}</p>
-    </a>
+    <article class="hero-mag">
+      <a class="hero-mag__link" href="${postUrl(post.slug)}">
+        <img class="hero-mag__media" src="${post.coverImage}" alt="" width="1400" height="600" />
+        <div class="hero-mag__body">
+          <p class="hero-mag__kicker">${post.category} · Featured post</p>
+          <h2 class="hero-mag__title">${post.title}</h2>
+          <p class="hero-mag__excerpt">${post.excerpt}</p>
+        </div>
+      </a>
+    </article>
   `;
 }
 
@@ -93,39 +111,63 @@ async function initLayout() {
   const site = await loadSiteData();
   headerEl.innerHTML = renderHeader(site, page);
   footerEl.innerHTML = renderFooter(site);
-  document.title = document.title.replace("Quiet Notes", site.siteName);
 }
 
 async function initHome() {
-  const heroTitle = document.getElementById("hero-title");
-  const heroTagline = document.getElementById("hero-tagline");
-  const featuredEl = document.getElementById("featured-post");
-  const latestEl = document.getElementById("latest-posts");
-  if (!heroTitle) return;
+  const introTitle = document.getElementById("intro-title");
+  const introText = document.getElementById("intro-text");
+  const heroEl = document.getElementById("hero-feature");
+  const gridEl = document.getElementById("home-grid");
+  if (!introTitle) return;
 
   const site = await loadSiteData();
-  heroTitle.textContent = site.siteName;
-  heroTagline.textContent = site.tagline;
+  document.title = `${site.siteName} — Blog`;
+  introTitle.textContent = site.siteName;
+  introText.textContent = site.tagline;
 
   const sorted = sortPosts(site.posts);
   const featured = sorted.find((p) => p.featured) || sorted[0];
-  const latest = sorted.filter((p) => p.slug !== featured.slug).slice(0, 4);
+  const rest = sorted.filter((p) => p.slug !== featured.slug).slice(0, 3);
 
-  if (featuredEl && featured) {
-    featuredEl.innerHTML = renderFeatured(featured);
-  }
-  if (latestEl) {
-    latestEl.innerHTML = latest.map(renderPostListItem).join("");
-  }
+  if (heroEl && featured) heroEl.innerHTML = renderHeroMag(featured);
+  if (gridEl) gridEl.innerHTML = rest.map(renderCard).join("");
+}
+
+function bindCategoryFilters(container, posts, gridEl) {
+  const buttons = container.querySelectorAll(".chip[data-filter]");
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      buttons.forEach((b) => b.classList.remove("chip--active"));
+      btn.classList.add("chip--active");
+      const filter = btn.dataset.filter;
+      const filtered =
+        filter === "all"
+          ? posts
+          : posts.filter((p) => p.category === filter);
+      gridEl.innerHTML = filtered.length
+        ? filtered.map(renderCard).join("")
+        : '<li class="empty-state">No posts in this category.</li>';
+    });
+  });
 }
 
 async function initBlog() {
-  const listEl = document.getElementById("blog-list");
-  if (!listEl) return;
+  const gridEl = document.getElementById("blog-grid");
+  const chipsEl = document.getElementById("category-chips");
+  if (!gridEl) return;
 
   const site = await loadSiteData();
   const sorted = sortPosts(site.posts);
-  listEl.innerHTML = sorted.map(renderPostListItem).join("");
+  gridEl.innerHTML = sorted.map(renderCard).join("");
+
+  if (chipsEl && site.categories) {
+    const chips = [
+      renderChip("All", true, "all"),
+      ...site.categories.map((c) => renderChip(c, false, c)),
+    ].join("");
+    chipsEl.innerHTML = chips;
+    bindCategoryFilters(chipsEl, sorted, gridEl);
+  }
 }
 
 async function initPost() {
@@ -142,32 +184,48 @@ async function initPost() {
   if (!post) {
     root.innerHTML =
       '<p class="empty-state">Post not found. <a href="blog.html">Back to Blog</a></p>';
-    document.title = `Not found — ${site.siteName}`;
     return;
   }
 
   const prev = index < sorted.length - 1 ? sorted[index + 1] : null;
   const next = index > 0 ? sorted[index - 1] : null;
+  const related = sorted
+    .filter((p) => p.category === post.category && p.slug !== post.slug)
+    .slice(0, 3);
 
   document.title = `${post.title} — ${site.siteName}`;
 
+  const relatedHtml = related.length
+    ? `
+    <section class="related" aria-labelledby="related-title">
+      <div class="section-head">
+        <h2 class="section-head__title" id="related-title">More posts in ${post.category}</h2>
+      </div>
+      <ul class="card-grid">${related.map(renderCard).join("")}</ul>
+    </section>`
+    : "";
+
   root.innerHTML = `
-    <article>
-      <header class="post-header">
-        <p class="post-header__meta">
+    <article class="post-article">
+      <header class="post-article__header container container--narrow">
+        <p class="post-article__kicker">${post.category}</p>
+        <h1 class="post-article__title">${post.title}</h1>
+        <p class="post-article__meta">
           <time datetime="${post.publishDate}">${formatDate(post.publishDate)}</time>
           · ${post.author}
         </p>
-        <h1 class="post-header__title">${post.title}</h1>
       </header>
-      <img class="post-cover" src="${post.coverImage}" alt="" width="1200" height="675" />
-      <div class="post-body">${post.body}</div>
-      <nav class="post-nav" aria-label="Post navigation">
-        <span>${prev ? `<a href="${postUrl(prev.slug)}">← ${prev.title}</a>` : ""}</span>
-        <a href="blog.html">All posts</a>
-        <span>${next ? `<a href="${postUrl(next.slug)}">${next.title} →</a>` : ""}</span>
-      </nav>
+      <div class="container container--narrow">
+        <img class="post-article__cover" src="${post.coverImage}" alt="" width="1200" height="675" />
+        <div class="post-article__body">${post.body}</div>
+        <nav class="post-article__nav" aria-label="Article navigation">
+          <span>${prev ? `<a href="${postUrl(prev.slug)}">← ${prev.title}</a>` : ""}</span>
+          <a href="blog.html">All posts</a>
+          <span>${next ? `<a href="${postUrl(next.slug)}">${next.title} →</a>` : ""}</span>
+        </nav>
+      </div>
     </article>
+    <div class="container">${relatedHtml}</div>
   `;
 }
 
@@ -183,7 +241,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const main = document.querySelector("main .container");
     if (main) {
       main.innerHTML =
-        '<p class="empty-state">Could not load site data. Serve this folder with a local server (e.g. <code>npx serve minimal-blog</code>).</p>';
+        '<p class="empty-state">Could not load site data. Run <code>python3 -m http.server 3456</code> inside the <code>minimal-blog</code> folder.</p>';
     }
   }
 });

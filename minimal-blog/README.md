@@ -1,34 +1,24 @@
-# Minimal Blog — CMS Template Sample
+# The Daily Draft — Blog Sample
 
-Wix CMS 미니멀 블로그 템플릿(4페이지)을 정적 HTML로 재현한 샘플입니다.
+개인 블로그 컨셉 CMS 템플릿 샘플 (정적 HTML).
 
-## 페이지 ↔ Wix 매핑
+## 사이트명
 
-| 파일 | Wix 페이지 타입 | URL |
-|------|-----------------|-----|
-| `index.html` | Static — Home | `/` |
-| `blog.html` | Dynamic List — Blog | `/blog` |
-| `post.html?slug=…` | Dynamic Item — Post | `/blog/{slug}` |
-| `about.html` | Static — About | `/about` |
+**The Daily Draft** — 헤더, 푸터, 타이틀, `posts.json` 전역 사용.
 
-## 데이터 (CMS)
+## 페이지
 
-`posts.json` = **Posts** 컬렉션 샘플 (8건, `featured` 1건).
+| 파일 | Wix |
+|------|-----|
+| `index.html` | Home |
+| `blog.html` | Blog (Dynamic List) |
+| `post.html?slug=` | Blog post (Dynamic Item) |
+| `about.html` | About |
 
-## 로컬에서 보기
-
-`file://`로 열면 `fetch`가 막힐 수 있습니다. 이 폴더에서:
+## 미리보기
 
 ```bash
 python3 -m http.server 3456
 ```
 
-브라우저: http://localhost:3456
-
-## GitHub
-
-저장소: https://github.com/rabbitgirl80/work (경로: `minimal-blog/`)
-
-## 디자인 토큰
-
-`style.css`는 상위 `tokens.css`(LPC_2.0)를 import합니다.
+http://localhost:3456
