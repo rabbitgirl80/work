@@ -1,0 +1,86 @@
+{
+  "siteName": "Quiet Notes",
+  "tagline": "Short essays on design, work, and everyday life.",
+  "posts": [
+    {
+      "slug": "slow-mornings",
+      "title": "Slow Mornings",
+      "excerpt": "Why the first hour of the day deserves more margin than the rest.",
+      "author": "Mihyun",
+      "publishDate": "2026-05-28",
+      "featured": true,
+      "coverImage": "https://picsum.photos/seed/slow-mornings/1200/675",
+      "body": "<p>I used to treat mornings as a race to inbox zero. The shift came when I blocked thirty minutes with no inputs—no feeds, no messages, just coffee and a notebook.</p><p>That small buffer changed how the rest of the day felt. Decisions arrived with less noise. Writing came easier because the first words were mine, not borrowed urgency.</p><p>If you are building a minimal site, protect one ritual the way you protect a logo: same time, same place, same silence.</p>"
+    },
+    {
+      "slug": "one-typeface",
+      "title": "One Typeface Is Enough",
+      "excerpt": "Consistency beats variety when readability is the goal.",
+      "author": "Mihyun",
+      "publishDate": "2026-05-21",
+      "featured": false,
+      "coverImage": "https://picsum.photos/seed/one-typeface/1200/675",
+      "body": "<p>Every new font in a project is a relationship to maintain. Families, weights, fallbacks, and licensing multiply quickly.</p><p>For editorial layouts, a single family with clear hierarchy—display size for titles, text size for body—often outperforms a pairing chosen for novelty.</p><p>Let color and spacing carry personality instead.</p>"
+    },
+    {
+      "slug": "lists-over-grids",
+      "title": "Lists Over Grids for Blogs",
+      "excerpt": "Vertical rhythm helps readers scan without visual competition.",
+      "author": "Mihyun",
+      "publishDate": "2026-05-14",
+      "featured": false,
+      "coverImage": "https://picsum.photos/seed/lists-over-grids/1200/675",
+      "body": "<p>Card grids look rich in marketing demos and tired in daily reading. A simple list—date, title, one-line summary—respects attention.</p><p>Thumbnails are optional. When they appear, keep them small so the title remains the anchor.</p>"
+    },
+    {
+      "slug": "draft-in-public",
+      "title": "Draft in Public, Publish in Private",
+      "excerpt": "Share process, ship finished work.",
+      "author": "Mihyun",
+      "publishDate": "2026-05-07",
+      "featured": false,
+      "coverImage": "https://picsum.photos/seed/draft-in-public/1200/675",
+      "body": "<p>Social posts are sketches. Blog posts are rooms you invite people into. The difference is editing and intent.</p><p>Write messy notes elsewhere. Publish when a single idea can stand without footnotes.</p>"
+    },
+    {
+      "slug": "footer-as-closing",
+      "title": "The Footer as a Closing Sentence",
+      "excerpt": "End pages with calm, not clutter.",
+      "author": "Mihyun",
+      "publishDate": "2026-04-30",
+      "featured": false,
+      "coverImage": "https://picsum.photos/seed/footer-closing/1200/675",
+      "body": "<p>Footers accumulate links like attics accumulate boxes. For minimal templates, one copyright line and maybe a single social link is enough.</p><p>Everything else can live on About.</p>"
+    },
+    {
+      "slug": "cms-as-master",
+      "title": "CMS as Master Slide",
+      "excerpt": "One post layout, many URLs—like a template that repeats.",
+      "author": "Mihyun",
+      "publishDate": "2026-04-22",
+      "featured": false,
+      "coverImage": "https://picsum.photos/seed/cms-master/1200/675",
+      "body": "<p>In Wix, dynamic item pages behave like PowerPoint masters: design once, populate with collection data.</p><p>Static pages handle Home and About. The list page handles discovery. The item page handles depth.</p>"
+    },
+    {
+      "slug": "featured-one",
+      "title": "Feature Only One Post",
+      "excerpt": "A single highlight on Home beats a carousel.",
+      "author": "Mihyun",
+      "publishDate": "2026-04-15",
+      "featured": false,
+      "coverImage": "https://picsum.photos/seed/featured-one/1200/675",
+      "body": "<p>Home should answer two questions: what is this site, and what should I read first?</p><p>Mark one post as featured and show three or four recent titles beneath. That is sufficient hierarchy.</p>"
+    },
+    {
+      "slug": "about-stays-static",
+      "title": "Keep About Static",
+      "excerpt": "Bio pages change rarely; posts change often.",
+      "author": "Mihyun",
+      "publishDate": "2026-04-08",
+      "featured": false,
+      "coverImage": "https://picsum.photos/seed/about-static/1200/675",
+      "body": "<p>Resist turning About into another feed. A portrait, two paragraphs, and a link back to the blog is a complete page.</p><p>Save CMS connections for content that actually repeats.</p>"
+    }
+  ]
+}
