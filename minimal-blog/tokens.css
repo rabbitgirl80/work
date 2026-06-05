@@ -1,0 +1,278 @@
+/**
+ * LPC_2.0 — design tokens from Figma variables
+ * Sources (file: sdqwnHqJEhEug60Y2aBWak):
+ *   Typography frame 5939:2741
+ *   Color frame       5939:2947
+ *   Layout frame      5939:2845
+ */
+
+:root {
+  /* —— Primitives (hex from Figma only) —— */
+  --color-primitive-black: #000000;
+  --color-primitive-white: #ffffff;
+  --color-primitive-gray-100: #fcfcfc;
+  --color-primitive-gray-150: #f5f5f5;
+  --color-primitive-gray-200: #efefef;
+  --color-primitive-gray-300: #dfdfdf;
+  --color-primitive-gray-350: #c8c8c8;
+  --color-primitive-gray-500: #949494;
+  --color-primitive-gray-600: #777777;
+  --color-primitive-gray-700: #555555;
+  --color-primitive-gray-900: #111111;
+  --color-primitive-brand-primary: #06c755;
+  --color-primitive-link: #4270ed;
+  --color-primitive-secondary: #707991;
+
+  /* —— Semantic (reference primitives) —— */
+  --color-primary: var(--color-primitive-brand-primary);
+  --color-link: var(--color-primitive-link);
+  --color-text-primary: var(--color-primitive-gray-900);
+  --color-text-secondary: var(--color-primitive-gray-600);
+  --color-text-tertiary: var(--color-primitive-gray-500);
+  --color-text-on-primary: var(--color-primitive-white);
+  --color-bg-surface: var(--color-primitive-white);
+  --color-bg-subtle: var(--color-primitive-gray-100);
+  --color-bg-muted: var(--color-primitive-gray-150);
+  --color-border-default: var(--color-primitive-gray-300);
+  --color-border-strong: var(--color-primitive-gray-350);
+  --color-semantic-secondary: var(--color-primitive-secondary);
+  --color-on-surface: var(--color-primitive-white);
+  --color-on-surface-alt: var(--color-primitive-black);
+
+  /* —— Component-oriented (optional aliases) —— */
+  --color-button-primary-bg: var(--color-primary);
+  --color-button-primary-text: var(--color-text-on-primary);
+  --color-link-text: var(--color-link);
+
+  /* —— Effects (from variable "On White / Large", layout node) —— */
+  --shadow-on-white-large: 0 1px 20px #00000012;
+
+  /* —— Typography: Title XXL 38 —— */
+  --type-title-xxl-regular-font-family: "SF Pro Display", system-ui, sans-serif;
+  --type-title-xxl-regular-font-size: 38px;
+  --type-title-xxl-regular-font-weight: 400;
+  --type-title-xxl-regular-line-height: 46px;
+  --type-title-xxl-regular-letter-spacing: 0.37px;
+  --type-title-xxl-bold-font-family: "SF Pro Display", system-ui, sans-serif;
+  --type-title-xxl-bold-font-size: 38px;
+  --type-title-xxl-bold-font-weight: 700;
+  --type-title-xxl-bold-line-height: 46px;
+  --type-title-xxl-bold-letter-spacing: 0.37px;
+  --type-title-xxl-heavy-font-family: "SF Pro Display", system-ui, sans-serif;
+  --type-title-xxl-heavy-font-size: 38px;
+  --type-title-xxl-heavy-font-weight: 800;
+  --type-title-xxl-heavy-line-height: 46px;
+  --type-title-xxl-heavy-letter-spacing: 0.37px;
+
+  /* —— Title XL 26 —— */
+  --type-title-xl-regular-font-family: "SF Pro Display", system-ui, sans-serif;
+  --type-title-xl-regular-font-size: 26px;
+  --type-title-xl-regular-font-weight: 400;
+  --type-title-xl-regular-line-height: 31px;
+  --type-title-xl-regular-letter-spacing: 0.33px;
+  --type-title-xl-bold-font-family: "SF Pro Display", system-ui, sans-serif;
+  --type-title-xl-bold-font-size: 26px;
+  --type-title-xl-bold-font-weight: 700;
+  --type-title-xl-bold-line-height: 31px;
+  --type-title-xl-bold-letter-spacing: 0.33px;
+  --type-title-xl-heavy-font-family: "SF Pro Display", system-ui, sans-serif;
+  --type-title-xl-heavy-font-size: 26px;
+  --type-title-xl-heavy-font-weight: 800;
+  --type-title-xl-heavy-line-height: 31px;
+  --type-title-xl-heavy-letter-spacing: 0.33px;
+
+  /* —— Title L 20 —— */
+  --type-title-l-regular-font-family: "SF Pro Display", system-ui, sans-serif;
+  --type-title-l-regular-font-size: 20px;
+  --type-title-l-regular-font-weight: 400;
+  --type-title-l-regular-line-height: 26px;
+  --type-title-l-regular-letter-spacing: 0.34px;
+  --type-title-l-bold-font-family: "SF Pro Display", system-ui, sans-serif;
+  --type-title-l-bold-font-size: 20px;
+  --type-title-l-bold-font-weight: 700;
+  --type-title-l-bold-line-height: 26px;
+  --type-title-l-bold-letter-spacing: 0.34px;
+  --type-title-l-heavy-font-family: "SF Pro Display", system-ui, sans-serif;
+  --type-title-l-heavy-font-size: 20px;
+  --type-title-l-heavy-font-weight: 800;
+  --type-title-l-heavy-line-height: 26px;
+  --type-title-l-heavy-letter-spacing: 0.34px;
+
+  /* —— Title M 17 —— */
+  --type-title-m-regular-font-family: "SF Pro Text", system-ui, sans-serif;
+  --type-title-m-regular-font-size: 17px;
+  --type-title-m-regular-font-weight: 400;
+  --type-title-m-regular-line-height: 22px;
+  --type-title-m-regular-letter-spacing: -0.44px;
+  --type-title-m-bold-font-family: "SF Pro Text", system-ui, sans-serif;
+  --type-title-m-bold-font-size: 17px;
+  --type-title-m-bold-font-weight: 700;
+  --type-title-m-bold-line-height: 22px;
+  --type-title-m-bold-letter-spacing: -0.44px;
+  --type-title-m-heavy-font-family: "SF Pro Text", system-ui, sans-serif;
+  --type-title-m-heavy-font-size: 17px;
+  --type-title-m-heavy-font-weight: 800;
+  --type-title-m-heavy-line-height: 22px;
+  --type-title-m-heavy-letter-spacing: -0.44px;
+
+  /* —— Title S 15 —— */
+  --type-title-s-regular-font-family: "SF Pro Text", system-ui, sans-serif;
+  --type-title-s-regular-font-size: 15px;
+  --type-title-s-regular-font-weight: 400;
+  --type-title-s-regular-line-height: 20px;
+  --type-title-s-regular-letter-spacing: -0.24px;
+  --type-title-s-bold-font-family: "SF Pro Text", system-ui, sans-serif;
+  --type-title-s-bold-font-size: 15px;
+  --type-title-s-bold-font-weight: 700;
+  --type-title-s-bold-line-height: 20px;
+  --type-title-s-bold-letter-spacing: -0.24px;
+  --type-title-s-heavy-font-family: "SF Pro Text", system-ui, sans-serif;
+  --type-title-s-heavy-font-size: 15px;
+  --type-title-s-heavy-font-weight: 800;
+  --type-title-s-heavy-line-height: 20px;
+  --type-title-s-heavy-letter-spacing: -0.24px;
+
+  /* —— Title XS 13 —— */
+  --type-title-xs-regular-font-family: "SF Pro Text", system-ui, sans-serif;
+  --type-title-xs-regular-font-size: 13px;
+  --type-title-xs-regular-font-weight: 400;
+  --type-title-xs-regular-line-height: 16px;
+  --type-title-xs-regular-letter-spacing: -0.09px;
+  --type-title-xs-bold-font-family: "SF Pro Text", system-ui, sans-serif;
+  --type-title-xs-bold-font-size: 13px;
+  --type-title-xs-bold-font-weight: 700;
+  --type-title-xs-bold-line-height: 16px;
+  --type-title-xs-bold-letter-spacing: -0.09px;
+  --type-title-xs-heavy-font-family: "SF Pro Text", system-ui, sans-serif;
+  --type-title-xs-heavy-font-size: 13px;
+  --type-title-xs-heavy-font-weight: 800;
+  --type-title-xs-heavy-line-height: 16px;
+  --type-title-xs-heavy-letter-spacing: -0.09px;
+
+  /* —— Text L 17 —— */
+  --type-text-l-regular-font-family: "SF Pro Text", system-ui, sans-serif;
+  --type-text-l-regular-font-size: 17px;
+  --type-text-l-regular-font-weight: 400;
+  --type-text-l-regular-line-height: 26px;
+  --type-text-l-regular-letter-spacing: -0.44px;
+  --type-text-l-bold-font-family: "SF Pro Text", system-ui, sans-serif;
+  --type-text-l-bold-font-size: 17px;
+  --type-text-l-bold-font-weight: 700;
+  --type-text-l-bold-line-height: 26px;
+  --type-text-l-bold-letter-spacing: -0.44px;
+  --type-text-l-heavy-font-family: "SF Pro Text", system-ui, sans-serif;
+  --type-text-l-heavy-font-size: 17px;
+  --type-text-l-heavy-font-weight: 800;
+  --type-text-l-heavy-line-height: 26px;
+  --type-text-l-heavy-letter-spacing: -0.44px;
+
+  /* —— Text M 15 —— */
+  --type-text-m-regular-font-family: "SF Pro Text", system-ui, sans-serif;
+  --type-text-m-regular-font-size: 15px;
+  --type-text-m-regular-font-weight: 400;
+  --type-text-m-regular-line-height: 22px;
+  --type-text-m-regular-letter-spacing: -0.25px;
+  --type-text-m-bold-font-family: "SF Pro Text", system-ui, sans-serif;
+  --type-text-m-bold-font-size: 15px;
+  --type-text-m-bold-font-weight: 700;
+  --type-text-m-bold-line-height: 22px;
+  --type-text-m-bold-letter-spacing: -0.25px;
+  --type-text-m-heavy-font-family: "SF Pro Text", system-ui, sans-serif;
+  --type-text-m-heavy-font-size: 15px;
+  --type-text-m-heavy-font-weight: 800;
+  --type-text-m-heavy-line-height: 22px;
+  --type-text-m-heavy-letter-spacing: -0.25px;
+
+  /* —— Text S 13 —— */
+  --type-text-s-regular-font-family: "SF Pro Text", system-ui, sans-serif;
+  --type-text-s-regular-font-size: 13px;
+  --type-text-s-regular-font-weight: 400;
+  --type-text-s-regular-line-height: 18px;
+  --type-text-s-regular-letter-spacing: -0.09px;
+  --type-text-s-bold-font-family: "SF Pro Text", system-ui, sans-serif;
+  --type-text-s-bold-font-size: 13px;
+  --type-text-s-bold-font-weight: 700;
+  --type-text-s-bold-line-height: 18px;
+  --type-text-s-bold-letter-spacing: -0.09px;
+  --type-text-s-heavy-font-family: "SF Pro Text", system-ui, sans-serif;
+  --type-text-s-heavy-font-size: 13px;
+  --type-text-s-heavy-font-weight: 800;
+  --type-text-s-heavy-line-height: 18px;
+  --type-text-s-heavy-letter-spacing: -0.09px;
+
+  /* —— Text XS 11 —— */
+  --type-text-xs-regular-font-family: "SF Pro Text", system-ui, sans-serif;
+  --type-text-xs-regular-font-size: 11px;
+  --type-text-xs-regular-font-weight: 400;
+  --type-text-xs-regular-line-height: 16px;
+  --type-text-xs-regular-letter-spacing: 0.06px;
+  --type-text-xs-bold-font-family: "SF Pro Text", system-ui, sans-serif;
+  --type-text-xs-bold-font-size: 11px;
+  --type-text-xs-bold-font-weight: 700;
+  --type-text-xs-bold-line-height: 16px;
+  --type-text-xs-bold-letter-spacing: 0.06px;
+  --type-text-xs-heavy-font-family: "SF Pro Text", system-ui, sans-serif;
+  --type-text-xs-heavy-font-size: 11px;
+  --type-text-xs-heavy-font-weight: 800;
+  --type-text-xs-heavy-line-height: 16px;
+  --type-text-xs-heavy-letter-spacing: 0.06px;
+
+  /* —— Laypopup node 5237:5460 (Figma variables) —— */
+  --color-primitive-gray-250: #e8e8e8;
+  --color-primitive-gray-650: #616161;
+  --color-primitive-gray-850: #1f1f1f;
+
+  --color-button-inverse-bg: var(--color-primitive-gray-850);
+  --color-button-inverse-border: var(--color-primitive-gray-850);
+  --color-button-inverse-text: var(--color-primitive-white);
+  --color-button-outline-bg: var(--color-primitive-white);
+  --color-button-outline-border: var(--color-primitive-gray-250);
+  --color-button-outline-text: var(--color-primitive-gray-850);
+
+  --type-popup-headline-kr-font-family: "Noto Sans KR", system-ui, sans-serif;
+  --type-popup-headline-kr-font-size: 24px;
+  --type-popup-headline-kr-font-weight: 500;
+  --type-popup-headline-kr-line-height: 1.3;
+  --type-popup-headline-kr-letter-spacing: 0;
+
+  --type-popup-body-font-family: "SF Pro Text", system-ui, sans-serif;
+  --type-popup-body-font-size: 16px;
+  --type-popup-body-font-weight: 400;
+  --type-popup-body-line-height: 19px;
+  --type-popup-body-letter-spacing: 0;
+
+  --type-button-14-medium-font-family: "SF Pro Display", system-ui, sans-serif;
+  --type-button-14-medium-font-size: 14px;
+  --type-button-14-medium-font-weight: 500;
+  --type-button-14-medium-line-height: 1.5;
+  --type-button-14-medium-letter-spacing: 0;
+
+  --radius-popup: 2px;
+  --laypopup-width-md: 480px;
+  --laypopup-min-height-md: 349px;
+  --laypopup-width-sm: 400px;
+  --laypopup-min-height-sm: 320px;
+  --laypopup-icon-hit: 30px;
+  --laypopup-actions-gap: 8px;
+  --button-pad-x-md: 20px;
+  --button-pad-y-md: 8px;
+  --button-pad-x-sm: 16px;
+  --button-pad-y-sm: 6px;
+  --button-pad-x-lg: 24px;
+  --button-pad-y-lg: 10px;
+  --button-font-sm: 13px;
+  --button-font-md: 14px;
+  --button-font-lg: 15px;
+
+  /* —— Form popup (member add 등) —— laypopup 토큰과 동일 계열 */
+  --laypopup-width-form: 520px;
+  --laypopup-min-height-form: 400px;
+  --form-field-gap: 16px;
+  --form-label-margin-bottom: 6px;
+  --input-padding-x: 12px;
+  --input-padding-y: 10px;
+  --input-border-color: var(--color-primitive-gray-250);
+  --input-border-color-focus: var(--color-primitive-link);
+  --input-text-color: var(--color-primitive-gray-850);
+  --input-placeholder-color: var(--color-primitive-gray-500);
+}

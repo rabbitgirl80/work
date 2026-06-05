@@ -1,0 +1,40 @@
+{
+  "siteName": "The Daily Draft",
+  "tagline": "A personal blog for essays, notes, and things worth posting.",
+  "categories": ["Life", "Work", "Travel", "Food"],
+  "posts": [
+    {
+      "slug": "morning-pages",
+      "title": "Morning Pages Before Email",
+      "excerpt": "Ten minutes of handwriting changed how I start the workday.",
+      "author": "Mihyun Park",
+      "publishDate": "2026-05-30",
+      "category": "Life",
+      "featured": true,
+      "coverImage": "https://picsum.photos/seed/draft-morning/1400/900",
+      "body": "<p class=\"lead\">I do not check my phone until the notebook is full—usually half a page, never more.</p><p>Some days it is grocery lists and stray worries. Other days a single sentence is enough: <em>today, finish the small thing first.</em></p><p>Posting it here is optional; the blog is the public layer on top of a private habit.</p>"
+    },
+    {
+      "slug": "remote-desk-setup",
+      "title": "My Remote Desk Setup in 2026",
+      "excerpt": "Chair, light, and one rule: cables where I cannot see them.",
+      "author": "Mihyun Park",
+      "publishDate": "2026-05-24",
+      "category": "Work",
+      "featured": false,
+      "coverImage": "https://picsum.photos/seed/draft-desk/1200/800",
+      "body": "<p>The monitor sits at arm's length. The keyboard is quiet enough for calls. Everything else is negotiable.</p><p>I used to chase perfect gear. Now I chase a clear surface at 5 p.m.</p>"
+    },
+    {
+      "slug": "blog-categories",
+      "title": "Why I Use Four Categories on This Blog",
+      "excerpt": "Fewer labels make archiving easier—for me and for readers.",
+      "author": "Mihyun Park",
+      "publishDate": "2026-05-18",
+      "category": "Work",
+      "featured": false,
+      "coverImage": "https://picsum.photos/seed/draft-categories/1200/800",
+      "body": "<p>Life, Work, Travel, Food. That is the whole map. If a post does not fit, I edit the post—not the taxonomy.</p><p>On the blog page you can filter by chip. It is the same list, just narrowed.</p>"
+    }
+  ]
+}
