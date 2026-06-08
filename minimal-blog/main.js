@@ -1,5 +1,6 @@
 const NAV_ITEMS = [
   { id: "home", label: "Home", href: "index.html" },
+  { id: "admissions", label: "수시 가상지원", href: "admissions.html" },
   { id: "blog", label: "Blog", href: "blog.html" },
   { id: "about", label: "About", href: "about.html" },
 ];
@@ -57,7 +58,7 @@ function renderFooter(site) {
     <footer class="site-footer">
       <div class="container site-footer__inner">
         <p>© ${year} ${site.siteName}</p>
-        <span class="site-footer__tag">Personal blog sample</span>
+        <span class="site-footer__tag">수시 가상지원 데모</span>
       </div>
     </footer>
   `;
@@ -121,7 +122,7 @@ async function initHome() {
   if (!introTitle) return;
 
   const site = await loadSiteData();
-  document.title = `${site.siteName} — Blog`;
+  document.title = `${site.siteName} — Home`;
   introTitle.textContent = site.siteName;
   introText.textContent = site.tagline;
 
